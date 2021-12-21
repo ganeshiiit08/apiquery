@@ -30,9 +30,9 @@ app.get("/books/", async (request, response) => {
   const {
     offset = 0,
     limit = 10,
-    order = ASC,
+    order = "ASC",
     order_by = "book_id",
-    search_q = " ",
+    search_q = "",
   } = request.query;
   const getBooksQuery = `SELECT
       *
